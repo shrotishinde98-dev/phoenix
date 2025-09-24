@@ -36,7 +36,12 @@ jobs:
            name: Newman-html-report
            path: newman/*.html
            
-        
+       - name : create pages 
+         if: always()
+         uses: actions/configure-pages@v5.0.0
+         with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: newman/
 
 
 

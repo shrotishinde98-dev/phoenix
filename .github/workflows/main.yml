@@ -24,7 +24,11 @@ jobs:
        - name: Run Collection
          run: |
            newman run 'flow_waaranty11.postman_collection.json' \
-      
+       - name : newman report
+         uses: actions/upload-artifact@v4.6.2
+         with:
+           name: newman report
+           path: newman/*.html
            
         
 

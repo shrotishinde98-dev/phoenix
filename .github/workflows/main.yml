@@ -2,8 +2,8 @@ name: Run API Tests
 on:
   push:
      branches: [main]
-workflow_dispatch:
-schedule:
+  workflow_dispatch:
+  schedule:
    - cron: '30 2  * * *'   #8:00 AM IST
    - cron: '30 13 * * *'  #7:00 PM IST
 
